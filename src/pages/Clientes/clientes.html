@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Clientes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <!--Imagen-->
+        <ion-img width="300" height="150" src="../../assets/img/usuario.png"></ion-img>
+        <!-- Nombre formControlName="nombre" -->    
+          <ion-label class="input-label">Nombre</ion-label>
+          <ion-input placeholder="Escriba el nombre" type="text"></ion-input>  
+    
+        <!-- Apellidos formControlName="apellidos" -->      
+          <ion-label>Apellidos</ion-label>
+          <ion-input placeholder="Escriba los apellidos" type="text"></ion-input>
+    
+        <!-- Edad formControlName="edad"-->    
+          <ion-label class="input-label">Edad</ion-label>
+          <ion-input class="input-label" placeholder="Escriba el edad" type="text"></ion-input>
+    
+        <!-- Dirección formControlName="direccion"-->      
+          <ion-label>Dirección</ion-label>
+          <ion-input placeholder="Escriba el direccion"  type="text"></ion-input>
+    
+        <!-- Codigo Postal formControlName="codigopostal"-->      
+          <ion-label>Codigo Postal</ion-label>
+          <ion-input placeholder="Escriba el codigo postal"  type="text"></ion-input>
+    
+        <!-- Provincia formControlName="provincia"-->      
+          <ion-label>Provincia</ion-label>
+          <ion-input placeholder="Escriba el provincia" type="text"></ion-input>
+    
+        <!-- Email formControlName="email"-->      
+          <ion-label>Email</ion-label>
+          <ion-input placeholder="Escriba el email"  type="text"></ion-input>
+    
+        <!-- DNI formControlName="dni"-->      
+          <ion-label>DNI</ion-label>
+          <ion-input placeholder="Escriba el dni"  type="text"></ion-input>
+    
+        <!-- Ciudad formControlName="ciudad"-->      
+          <ion-label>Ciudad</ion-label>
+          <ion-input placeholder="Escriba el ciudad"  type="text"></ion-input>
+    
+        <!-- Pais formControlName="pais"-->      
+          <ion-label>Pais</ion-label>
+          <ion-input placeholder="Escriba el pais"  type="text"></ion-input>
+    
+        <!-- Telefono formControlName="telefono"-->      
+          <ion-label>Telefono</ion-label>
+          <ion-input placeholder="Escriba el telefono" type="text"></ion-input>
+        <!-- Botones para ir a la lista -->
+        <button class="boton" ion-button color="secundary" (click)="Anadir()">Añadir</button>
+        <button class="boton" ion-button color="secundary" (click)="Listar()">Listar</button>
+      </ion-list>
+</ion-content>
