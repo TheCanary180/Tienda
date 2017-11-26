@@ -5,140 +5,107 @@
 </ion-header>
 
 <ion-content>
-  
-      <!-- Dirección formControlName="direccion"      
-        <ion-label>Dirección</ion-label>
-        <ion-input placeholder="Escriba el direccion"  type="text"></ion-input>
-  
-      <!-- Codigo Postal formControlName="codigopostal"      
-        <ion-label>Codigo Postal</ion-label>
-        <ion-input placeholder="Escriba el codigo postal"  type="text"></ion-input>
-  
-      <!-- Provincia formControlName="provincia"      
-        <ion-label>Provincia</ion-label>
-        <ion-input placeholder="Escriba el provincia" type="text"></ion-input>
-  
-      <!-- Email formControlName="email"      
-        <ion-label>Email</ion-label>
-        <ion-input placeholder="Escriba el email"  type="text"></ion-input>
-  
-      <!-- DNI formControlName="dni"      
-        <ion-label>DNI</ion-label>
-        <ion-input placeholder="Escriba el dni"  type="text"></ion-input>
-  
-      <!-- Ciudad formControlName="ciudad"      
-        <ion-label>Ciudad</ion-label>
-        <ion-input placeholder="Escriba el ciudad"  type="text"></ion-input>
-  
-      <!-- Pais formControlName="pais"      
-        <ion-label>Pais</ion-label>
-        <ion-input placeholder="Escriba el pais"  type="text"></ion-input>
-  
-      <!-- Telefono formControlName="telefono"      
-        <ion-label>Telefono</ion-label>
-        <ion-input placeholder="Escriba el telefono" type="text"></ion-input>
-        
-      <!-- Botones para ir a la lista 
-      <!-- <button class="boton" ion-button color="secundary" (click)="Anadir()">Añadir</button>
-      <button class="boton" ion-button color="secundary" (click)="Listar()">Listar</button> 
-
-
-    </ion-list>
-    <div padding>
-        <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
-      </div>
-    </form> -->
     <form [formGroup]="myForm" (ngSubmit)="guardarDatos()" novalidate>
-        <ion-list>
-          <!-- Imagen -->
+    <ion-list>
+      <!-- Imagen -->
       <ion-img width="300" height="350" src="../../assets/img/usuario.png"></ion-img>
 
-          <!-- Nombre -->
-            <ion-label>Nombre</ion-label>
-            <ion-input placeholder="Escriba el nombre" formControlName="nombre" type="text"></ion-input>
+      <!-- Nombre -->
+        <ion-label>Nombre</ion-label>
+        <ion-input placeholder="Escriba el nombre" formControlName="nombre" type="text"></ion-input>
           
-              <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
-                <p *ngIf="myForm.get('nombre').hasError('required')">Campo Requerido</p>
-              </ion-item>
+        <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
+          <p *ngIf="myForm.get('nombre').hasError('required')">Campo Requerido</p>
+        </ion-item>
     
-          <!-- Apellidos -->
-            <ion-label>Apellidos</ion-label>
-            <ion-input placeholder="Escriba los apellidos" formControlName="apellidos" type="text"></ion-input>
+      <!-- Apellidos -->
+        <ion-label>Apellidos</ion-label>
+        <ion-input placeholder="Escriba los apellidos" formControlName="apellidos" type="text"></ion-input>
           
-              <ion-item *ngIf="myForm.get('apellidos').errors && myForm.get('apellidos').dirty">
-                <p *ngIf="myForm.get('apellidos').hasError('required')">Campo Requerido</p>
-              </ion-item>
+        <ion-item *ngIf="myForm.get('apellidos').errors && myForm.get('apellidos').dirty">
+          <p *ngIf="myForm.get('apellidos').hasError('required')">Campo Requerido</p>
+        </ion-item>
     
-          <!-- Edad-->
-            <ion-label>Edad</ion-label>
-            <ion-input placeholder="Escriba la edad" formControlName="edad" type="text"></ion-input>
+      <!-- Edad-->
+        <ion-label>Edad</ion-label>
+        <ion-input placeholder="Escriba la edad" formControlName="edad" type="text"></ion-input>
           
-              <ion-item *ngIf="myForm.get('edad').errors && myForm.get('edad').dirty">
-                <p *ngIf="myForm.get('edad').hasError('required')">Campo Requerido</p>
-              </ion-item>
+        <ion-item *ngIf="myForm.get('edad').errors && myForm.get('edad').dirty">
+          <p *ngIf="myForm.get('edad').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-           <!-- Dirección -->
+      <!-- Dirección -->
         <ion-label>Dirección</ion-label>
         <ion-input placeholder="Escriba el direccion" type="text" formControlName="direccion"></ion-input>
-        <ion-item *ngIf="myForm.get('direccion').errors && myForm.get('direccion').dirty">
-            <p *ngIf="myForm.get('direccion').hasError('required')">Campo Requerido</p>
-          </ion-item>  
 
-           <!-- dni -->
+        <ion-item *ngIf="myForm.get('direccion').errors && myForm.get('direccion').dirty">
+          <p *ngIf="myForm.get('direccion').hasError('required')">Campo Requerido</p>
+        </ion-item>  
+
+      <!-- dni -->
         <ion-label>Dirección</ion-label>
         <ion-input placeholder="Escriba el dni" type="text" formControlName="dni"></ion-input>
+        
         <ion-item *ngIf="myForm.get('dni').errors && myForm.get('dni').dirty">
-            <p *ngIf="myForm.get('dni').hasError('required')">Campo Requerido</p>
-          </ion-item>
+          <p *ngIf="myForm.get('dni').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-           <!-- Ciudad -->
+      <!-- Ciudad -->
         <ion-label>Ciudad</ion-label>
         <ion-input placeholder="Escriba el ciudad" type="text" formControlName="ciudad"></ion-input>
+          
         <ion-item *ngIf="myForm.get('ciudad').errors && myForm.get('ciudad').dirty">
-            <p *ngIf="myForm.get('ciudad').hasError('required')">Campo Requerido</p>
-          </ion-item>
+          <p *ngIf="myForm.get('ciudad').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-                     <!-- Provincia -->
+      <!-- Provincia -->
         <ion-label>Provincia</ion-label>
         <ion-input placeholder="Escriba el provincia" type="text" formControlName="provincia"></ion-input>
+          
         <ion-item *ngIf="myForm.get('provincia').errors && myForm.get('provincia').dirty">
-            <p *ngIf="myForm.get('provincia').hasError('required')">Campo Requerido</p>
-          </ion-item>
+          <p *ngIf="myForm.get('provincia').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-                               <!-- Pais -->
+      <!-- Pais -->
         <ion-label>Pais</ion-label>
         <ion-input placeholder="Escriba el pais" type="text" formControlName="pais"></ion-input>
+          
         <ion-item *ngIf="myForm.get('pais').errors && myForm.get('pais').dirty">
-            <p *ngIf="myForm.get('pais').hasError('required')">Campo Requerido</p>
-          </ion-item>
+          <p *ngIf="myForm.get('pais').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-                               <!-- Email -->
+      <!-- Email -->
         <ion-label>Email</ion-label>
         <ion-input placeholder="Escriba el email" type="text" formControlName="email"></ion-input>
+          
         <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
-            <p *ngIf="myForm.get('email').hasError('required')">Campo Requerido</p>
-          </ion-item>
+          <p *ngIf="myForm.get('email').hasError('required')">Campo Requerido</p>
+        </ion-item>
 
-                               <!-- Codigo Postal -->
+      <!-- Codigo Postal -->
         <ion-label>Codigo Postal</ion-label>
-        <ion-input placeholder="Escriba el Codigo Postal" type="text" formControlName="codigopostal"></ion-input>
+        <ion-input placeholder="Escriba el Codigo Postal" type="number" formControlName="codigopostal"></ion-input>
+          
         <ion-item *ngIf="myForm.get('provincia').errors && myForm.get('provincia').dirty">
-            <p *ngIf="myForm.get('provincia').hasError('required')">Campo Requerido</p>
-          </ion-item> 
+          <p *ngIf="myForm.get('provincia').hasError('required')">Campo Requerido</p>
+          <p *ngIf="myForm.get('company').hasError('minlength')">Minimo 5 Caracteres</p>
+          <p *ngIf="myForm.get('company').hasError('maxlength')">Maximo 5 Caracteres</p>
+        </ion-item> 
     
-          <!--Telefono-->
-            <ion-label>Telefono</ion-label>
-            <ion-input placeholder="Escriba el telefono" formControlName="telefono" type="number"></ion-input>
+      <!--Telefono-->
+        <ion-label>Telefono</ion-label>
+        <ion-input placeholder="Escriba el telefono" formControlName="telefono" type="number"></ion-input>
           
-              <ion-item *ngIf="myForm.get('telefono').errors && myForm.get('telefono').dirty">
-                <p *ngIf="myForm.get('telefono').hasError('required')">Campo Requerido</p>
-                <p *ngIf="myForm.get('company').hasError('minlength')">Minimo 9 Caracteres</p>
-                <p *ngIf="myForm.get('company').hasError('maxlength')">Maximo 9 Caracteres</p>
-              </ion-item>   
+        <ion-item *ngIf="myForm.get('telefono').errors && myForm.get('telefono').dirty">
+          <p *ngIf="myForm.get('telefono').hasError('required')">Campo Requerido</p>
+          <p *ngIf="myForm.get('company').hasError('minlength')">Minimo 9 Caracteres</p>
+          <p *ngIf="myForm.get('company').hasError('maxlength')">Maximo 9 Caracteres</p>
+        </ion-item>   
           
-            </ion-list>
-        <div padding>
-          <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
-        </div>
-      </form>
+      </ion-list>
+      
+      <div padding>
+        <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
+      </div>
+    </form>
 </ion-content>

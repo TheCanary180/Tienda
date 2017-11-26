@@ -28,8 +28,7 @@ export class ClientePage {
         pais: ['', [Validators.required]],
         email: ['', [Validators.required]],
         codigopostal: ['', [Validators.required]],
-        telefono: ['', [Validators.required]],
-        // movil: ['', [Validators.required]]
+        telefono: ['', [Validators.required]],        
       });
     }
   
