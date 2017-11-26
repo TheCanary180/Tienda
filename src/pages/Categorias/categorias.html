@@ -6,19 +6,32 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <!-- Nombre de la categoria formControlName="nombre" -->    
-      <ion-label>Nombre de la categoria</ion-label>
-      <ion-input placeholder="Escriba el nombre" type="text"></ion-input>
-    
-    <!-- Descripcion formControlName="descripcion"-->    
-      <ion-label>Descripcion</ion-label>
-      <!-- <ion-textarea placeholder="Escriba el descripcion" type="text"></ion-textarea> -->  
-      <ion-textarea placeholder="Escriba el Descripcion" type="text"></ion-textarea>     
-     
-    <!-- Botones para ir a la lista -->
-    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
-    <button ion-button color="secundary" (click)="Listar()">Listar</button>
+  <form [formGroup]="myForm" (ngSubmit)="guardarDatos()" novalidate>
+    <ion-list>
+      <!-- Imagen -->
+      <ion-img width="300" height="200" src="../../assets/img/categoria.png"></ion-img>
 
-  </ion-list>
+      <!-- Nombre -->
+      <ion-label>Nombre</ion-label>
+      <ion-input placeholder="Escriba el nombre" formControlName="nombre" type="text"></ion-input>
+    
+      <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
+        <p *ngIf="myForm.get('nombre').hasError('required')">Campo Requerido</p>
+      </ion-item>
+  
+      <!-- Descripcion formControlName="descripcion"-->    
+      <ion-label>Descripcion</ion-label>        
+      <ion-textarea placeholder="Escriba el Descripcion" type="text" formControlName="descripcion"></ion-textarea>     
+    
+      <ion-item *ngIf="myForm.get('descripcion').errors && myForm.get('descripcion').dirty">
+        <p *ngIf="myForm.get('descripcion').hasError('required')">Campo Requerido</p>
+      </ion-item>  
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
+    </div>
+  </form>
 </ion-content>
+    <!-- Botones para ir a la lista
+    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
+    <button ion-button color="secundary" (click)="Listar()">Listar</button> -->

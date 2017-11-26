@@ -6,47 +6,74 @@
 
 
 <ion-content padding>
-  <ion-img width="300" height="150" src="../../assets/img/usuario.png"></ion-img>
-  <ion-list> 
-      <ion-item>
+    <form [formGroup]="myForm" (ngSubmit)="guardarDatos()" novalidate>
+        <ion-list>
+          <!-- Imagen -->
+          <ion-img width="300" height="200" src="../../assets/img/componentes.png"></ion-img> 
+      
+      <!-- <ion-item>
         <ion-label>Categoria</ion-label>
         <ion-select [(ngModel)]="categoria">
           <ion-option value="f">Female</ion-option>
           <ion-option value="m">Male</ion-option>
         </ion-select>
-      </ion-item>
+      </ion-item> -->
 
-    <!--proveedor formControlName="proveedor"-->
+    <!--proveedor formControlName="proveedor"
     <ion-item>
       <ion-label>Proveedor</ion-label>
       <ion-select [(ngModel)]="proveedor">
         <ion-option value="f">Female</ion-option>
         <ion-option value="m">Male</ion-option>
       </ion-select>
-    </ion-item>
+    </ion-item> -->
 
-    <!-- nombre formControlName="nombre"-->
-      <ion-label>nombre</ion-label>
-      <ion-input placeholder="Escriba el nombre" type="text"></ion-input>
+     <!-- Nombre -->
+     <ion-label>Nombre</ion-label>
+     <ion-input placeholder="Escriba el nombre" formControlName="nombre" type="text"></ion-input>
+    
+     <ion-item *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty">
+       <p *ngIf="myForm.get('nombre').hasError('required')">Campo Requerido</p>
+     </ion-item> 
 
-    <!-- precio formControlName="precio"-->
-      <ion-label>precio</ion-label>
-      <ion-input placeholder="Escriba el precio"  type="text"></ion-input>
 
-    <!-- unidades existentes formControlName="existencia"-->
-      <ion-label>unidades existentes</ion-label>
-      <ion-input placeholder="Escriba el unidades existentes"  type="text"></ion-input>
+          <!-- Precio -->
+          <ion-label>Precio</ion-label>
+          <ion-input placeholder="Escriba el precio" formControlName="precio" type="number"></ion-input>
+        
+          <ion-item *ngIf="myForm.get('precio').errors && myForm.get('precio').dirty">
+            <p *ngIf="myForm.get('precio').hasError('required')">Campo Requerido</p>
+          </ion-item> 
 
-    <!-- unidad de pedido formControlName="unidad de pedido"-->
-      <ion-label>unidad de pedido</ion-label>
-      <ion-input placeholder="Escriba el unidad de pedido" type="text"></ion-input>
+               <!-- UnidadesExistentes -->
+     <ion-label>Unidades Existentes</ion-label>
+     <ion-input placeholder="Escriba el existencias" formControlName="existencias" type="text"></ion-input>
+   
+     <ion-item *ngIf="myForm.get('existencias').errors && myForm.get('existencias').dirty">
+       <p *ngIf="myForm.get('existencias').hasError('required')">Campo Requerido</p>
+     </ion-item> 
 
-    <!-- descuentos formControlName="descuentos"-->
-      <ion-label>Descuentos</ion-label>
-      <ion-input placeholder="Escriba el descuentos"  type="text"></ion-input>
+          <!-- Unidadess del pedido -->
+          <ion-label>Unidadess del pedido</ion-label>
+          <ion-input placeholder="Escriba el pedido" formControlName="pedido" type="text"></ion-input>
+        
+          <ion-item *ngIf="myForm.get('pedido').errors && myForm.get('pedido').dirty">
+            <p *ngIf="myForm.get('pedido').hasError('required')">Campo Requerido</p>
+          </ion-item> 
 
-    <!-- Botones para ir a la lista -->
-    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
-    <button ion-button color="secundary" (click)="Listar()">Listar</button>  
-  </ion-list>  
+     <!-- Descuentos -->
+     <ion-label>Descuentos</ion-label>
+     <ion-input placeholder="Escriba el descuentos" formControlName="descuentos" type="text"></ion-input>
+   
+     <ion-item *ngIf="myForm.get('descuentos').errors && myForm.get('descuentos').dirty">
+       <p *ngIf="myForm.get('descuentos').hasError('required')">Campo Requerido</p>
+     </ion-item> 
+    </ion-list>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="myForm.invalid">Guardar</button>
+    </div>
+  </form>  
 </ion-content>
+    <!-- Botones para ir a la lista
+    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
+    <button ion-button color="secundary" (click)="Listar()">Listar</button>   -->
