@@ -4,8 +4,11 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ClientePage } from '../pages/Clientes/clientes';
 import { EmpleadoPage } from '../pages/Empleado/empleado';
-import { TextosPage } from '../pages/textos/textos';
-import { EditarPage } from '../pages/editar/editar';
+import { PedidosPage } from '../pages/Pedidos/pedidos';
+import { ProveedorPage } from '../pages/Proveedor/proveedor';
+import { ComponentesPage } from '../pages/Componentes/componentes';
+import { CategoriasPage } from '../pages/Categorias/categorias';
+
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,10 +38,10 @@ export class MyApp {
       { title: 'Inicio', component: HelloIonicPage },
       { title: 'Cliente', component: ClientePage },      
       { title: 'Empleados', component: EmpleadoPage },
-      { title: 'Componentes', component: EmpleadoPage },
-      { title: 'Categoria', component: TextosPage },
-      { title: 'Proveedor', component: ClientePage },
-      { title: 'Pedidos', component: EditarPage },
+      { title: 'Componentes', component: ComponentesPage },
+      { title: 'Categoria', component: CategoriasPage },
+      { title: 'Proveedor', component: ProveedorPage },
+      { title: 'Pedidos', component: PedidosPage },
     ];
   }
 

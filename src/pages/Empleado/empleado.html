@@ -6,7 +6,66 @@
 
 
 <ion-content padding>
-  <ion-img width="300" height="150" src="../../assets/img/gato.jpg"></ion-img>
-  <ion-img width="300" height="150" src="../../assets/img/imagen.jpg"></ion-img>
-  <ion-img width="300" height="200" src="../../assets/img/imagen2.jpg"></ion-img> 
+  <ion-list>
+    <!-- Nombre formControlName="nombre" -->
+      <ion-label>Nombre:</ion-label>
+      <ion-input placeholder="Escriba el nombre" type="text"></ion-input>
+
+    <!-- Apellidos formControlName="apellidos" -->
+      <ion-label>Apellidos:</ion-label>
+      <ion-input placeholder="Escriba los apellidos" type="text"></ion-input>
+
+    <!-- Edad formControlName="edad"-->
+      <ion-label>Edad:</ion-label>
+      <ion-input placeholder="Escriba el edad" type="text"></ion-input>
+
+    <!-- Dirección formControlName="direccion"-->
+      <ion-label>Dirección:</ion-label>
+      <ion-input placeholder="Escriba el direccion"  type="text"></ion-input>
+
+    <!-- Codigo Postal formControlName="codigopostal"-->
+      <ion-label>Codigo Postal:</ion-label>
+      <ion-input placeholder="Escriba el codigo postal"  type="text"></ion-input>
+
+    <!-- Provincia formControlName="provincia"-->
+      <ion-label>Provincia:</ion-label>
+      <ion-input placeholder="Escriba el provincia" type="text"></ion-input>
+
+    <!-- Email formControlName="email"-->
+      <ion-label>Email:</ion-label>
+      <ion-input placeholder="Escriba el email"  type="text"></ion-input>
+
+    <!-- DNI formControlName="dni"-->
+      <ion-label>DNI:</ion-label>
+      <ion-input placeholder="Escriba el dni"  type="text"></ion-input>
+
+    <!-- Ciudad formControlName="ciudad"-->
+      <ion-label>Ciudad:</ion-label>
+      <ion-input placeholder="Escriba el ciudad"  type="text"></ion-input>
+
+    <!-- Pais formControlName="pais"-->
+      <ion-label>Pais:</ion-label>
+      <ion-input placeholder="Escriba el pais"  type="text"></ion-input>
+
+    <!-- Telefono formControlName="telefono"-->
+      <ion-label>Telefono:</ion-label>
+      <ion-input placeholder="Escriba el telefono" type="text"></ion-input>
+
+    <!-- Turno formControlName="turno"-->
+      <ion-label>Turno:</ion-label>
+      <ion-input placeholder="Escriba el turno" type="text"></ion-input>
+
+    <!-- Puesto de trabajo formControlName="Puesto"-->
+      <ion-label>Puesto de trabajo:</ion-label>
+      <ion-input placeholder="Escriba el  de trabajo" type="text"></ion-input>
+
+    <!-- fecha de contratación formControlName="fecha" -->
+      <ion-label>fecha de contratación:</ion-label>
+      <ion-input placeholder="Escriba el fecha de contratacion" type="text"></ion-input>
+    
+    <!-- Botones para ir a la lista -->
+    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
+    <button ion-button color="secundary" (click)="Listar()">Listar</button>    
+
+  </ion-list>
 </ion-content>

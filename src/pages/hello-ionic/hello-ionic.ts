@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from "ionic-angular";
-import { JeremyPage } from "../jeremy/jeremy";
-import { CarlosPage } from "../carlos/carlos";
-import { AnaPage } from "../ana/ana";
-import { MariaPage } from "../maria/maria";
+import { PedidosPage } from "../Pedidos/pedidos";
+import { CategoriasPage } from "../Categorias/categorias";
+import { ComponentesPage } from "../Componentes/componentes";
+import { ProveedorPage } from '../Proveedor/proveedor';
 import { NorteComputerPage } from '../NorteComputer/nortecomputer';
 
 @Component({
@@ -14,19 +14,19 @@ export class HelloIonicPage {
   constructor(public navCtrl:NavController) {
 
   }
-  jeremy() {
-    this.navCtrl.push(JeremyPage);
+  Pedidos() {
+    this.navCtrl.push(PedidosPage);
   }
-  carlos() {
-    this.navCtrl.push(CarlosPage);
-  }
-
-  ana() {
-    this.navCtrl.push(AnaPage);
+  Categorias() {
+    this.navCtrl.push(CategoriasPage);
   }
 
-  maria() {
-    this.navCtrl.push(MariaPage);
+  Componentes() {
+    this.navCtrl.push(ComponentesPage);
+  }
+
+  Proveedor() {
+    this.navCtrl.push(ProveedorPage);
   }
   NorteComputer() {
     this.navCtrl.push(NorteComputerPage);

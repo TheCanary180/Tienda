@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { AlertController, NavController } from "ionic-angular";
+import { AlertController, NavController } from "ionic-angular";
 /*import { EditarPage } from "../editar/editar";*/
 
 @Component({
@@ -9,10 +9,8 @@ import { Component } from '@angular/core';
 export class EmpleadoPage {
 
 
-  // constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
-  // }
-  // Texto() {
-  //   this.navCtrl.push(TextoPage);
-  // }
+  }
+  
 }

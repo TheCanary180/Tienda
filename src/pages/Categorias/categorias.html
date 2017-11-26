@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>Categorias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <!-- Nombre de la categoria formControlName="nombre" -->    
+      <ion-label>Nombre de la categoria</ion-label>
+      <ion-input placeholder="Escriba el nombre" type="text"></ion-input>
+    
+    <!-- Descripcion formControlName="descripcion"-->    
+      <ion-label>Descripcion</ion-label>
+      <!-- <ion-textarea placeholder="Escriba el descripcion" type="text"></ion-textarea> -->  
+      <ion-textarea placeholder="Escriba el Descripcion" type="text"></ion-textarea>     
+     
+    <!-- Botones para ir a la lista -->
+    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
+    <button ion-button color="secundary" (click)="Listar()">Listar</button>
+
+  </ion-list>
+</ion-content>

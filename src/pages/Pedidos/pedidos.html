@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar>    
+    <ion-title>Pedidos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <ion-list>
+    <!-- Facturacion formControlName="Facturacion" tambien es el nombre -->
+    <ion-item>
+        <ion-label>Nombre a quien va la factura</ion-label>
+        <ion-select [(ngModel)]="categoria">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+
+    <!-- Apellidos formControlName="apellidos" -->
+      <ion-label>Apellidos</ion-label>
+      <ion-input placeholder="Escriba los apellidos" type="text"></ion-input>
+
+    <!-- Dirección formControlName="direccion"-->
+      <ion-label>Dirección</ion-label>
+      <ion-input placeholder="Escriba el direccion" type="text"></ion-input>
+
+    <!-- Ciudad formControlName="ciudad"-->
+        <ion-label>Ciudad</ion-label>
+        <ion-input placeholder="Escriba el ciudad"  type="text"></ion-input>
+
+    <!-- Provincia formControlName="provincia"-->
+        <ion-label>Provincia</ion-label><br/>
+        <ion-input placeholder="Escriba el provincia" type="text"></ion-input>
+
+    <!-- Pais formControlName="pais"-->
+        <ion-label>Pais</ion-label>
+        <ion-input placeholder="Escriba el pais"  type="text"></ion-input>
+
+    <!-- Codigo Postal formControlName="codigopostal"-->
+      <ion-label>Codigo Postal</ion-label>
+      <ion-input placeholder="Escriba el codigo postal"  type="text"></ion-input> 
+
+    <!-- Empleados formControlName="empleado"-->
+    <ion-item>
+        <ion-label>Empleados</ion-label>
+        <ion-select [(ngModel)]="categoria">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <!-- Id Pedido formControlName="IdPedido"-->
+        <ion-label>Id Pedido</ion-label>
+        <ion-input placeholder="Escriba el Id Pedido"  type="text"></ion-input> 
+
+    <!-- Fecha pedido formControlName="FechaPedido"-->
+        <ion-label>Fecha pedido</ion-label>
+        <ion-input placeholder="Escriba el Fecha pedido"  type="text"></ion-input> 
+    
+    <!-- Fecha Envio formControlName="FechaEnvio"-->
+        <ion-label>Fecha Envio</ion-label>
+        <ion-input placeholder="Escriba el Fecha Envio"  type="text"></ion-input> 
+
+    <!-- Fecha Entrega formControlName="FechaEntrega"-->
+        <ion-label>Fecha Entrega</ion-label>
+        <ion-input placeholder="Escriba el Fecha Entrega"  type="text"></ion-input> 
+
+    <!-- Producto formControlName="Producto"-->
+    <ion-item>
+        <ion-label>Producto</ion-label>
+        <ion-select [(ngModel)]="categoria">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <!-- Cantidad formControlName="Cantidad"-->
+        <ion-label>Cantidad</ion-label>
+        <ion-input placeholder="Escriba el Cantidad"  type="text"></ion-input>
+
+    <!-- Total formControlName="Total"-->
+        <ion-label>Total</ion-label>
+        <ion-input placeholder="Escriba el Total"  type="text"></ion-input>
+
+    <!-- Botones para ir a la lista -->
+    <button ion-button color="secundary" (click)="Anadir()">Añadir</button>
+    <button ion-button color="secundary" (click)="Listar()">Listar</button>  
+  </ion-list>
+</ion-content>

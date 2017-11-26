@@ -1,32 +1,51 @@
 import { Component } from '@angular/core';
-// import { NavController, NavParams } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 // import { ItemDetailsPage } from '../item-details/item-details';
+import { Validators, FormGroup, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: 'page-clientes',
   templateUrl: 'clientes.html'
 })
 export class ClientePage {
-  // icons: string[];
-  // items: Array<{title: string, note: string, icon: string}>;
-
-  // constructor(public navCtrl: NavController, public navParams: NavParams) {
-  //   this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-  //   'american-football', 'boat', 'bluetooth', 'build'];
-
-  //   this.items = [];
-  //   for(let i = 1; i < 11; i++) {
-  //     this.items.push({
-  //       title: 'Item ' + i,
-  //       note: 'This is item #' + i,
-  //       icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-  //     });
-  //   }
-  // }
-
-  // itemTapped(event, item) {
-  //   this.navCtrl.push(ItemDetailsPage, {
-  //     item: item
-  //   });
-  // }
+  myForm: FormGroup;
+  
+  
+    constructor(public navCtrl: NavController, public alertCtrl: AlertController, public fb: FormBuilder) {
+      this.inicializar();
+      this.guardarDatos();
+    }
+  
+    inicializar() {
+      this.myForm = this.fb.group({
+        nombre: ['', [Validators.required]],
+        apellidos: ['', [Validators.required]],
+        edad: ['', [Validators.required]],
+        direccion: ['', [Validators.required]],
+        dni: ['', [Validators.required]],
+        ciudad: ['', [Validators.required]],
+        provincia: ['', [Validators.required]],
+        pais: ['', [Validators.required]],
+        email: ['', [Validators.required]],
+        codigopostal: ['', [Validators.required]],
+        telefono: ['', [Validators.required]],
+        // movil: ['', [Validators.required]]
+      });
+    }
+  
+    grabarDatos() {
+      this.presentAlert();
+    }
+  
+    presentAlert() {
+      const alert = this.alertCtrl.create({
+        title: 'Low battery',
+        subTitle: '10% of battery remaining',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    }
+    guardarDatos() {
+      alert(JSON.stringify(this.myForm.value));
+    }
 }
